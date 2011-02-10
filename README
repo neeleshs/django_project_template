@@ -1,0 +1,7 @@
+apps - All your apps will go here
+lib - All third party apps and libs will go here, including django. This will be on your PYTHONPATH automatically
+templates - Templates
+public - Static assets like css, javascript, images
+config - urls.py, settings.py,local_settings.py and manage.py . local_settings.py should be added to the ignore list of your vcs
+fabfile.py - Fabric script to deploy the project on to an Ubuntu Server. Look at http://github.com/neeleshs/django_deploy
+

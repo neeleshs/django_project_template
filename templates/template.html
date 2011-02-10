@@ -1,0 +1,29 @@
+{%load i18n%}
+{%load utils%}
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>{{APP_NAME}} - {{APP_DESC}}</title>
+        <!-- Page Specific Styles -->
+        {%block styles%}{%endblock%}
+        <!-- Page Specific scripts -->
+        {%block scripts%}{%endblock%}
+	</head>
+	<body>
+	<div class="header">
+      {%if request.user.is_anonymous%}
+          <a href="#">{%trans 'Home'%}</a>
+      {%else%}
+      {%trans 'Welcome'%} {{request.user|format}}
+      <a href="#">{%trans 'Home'%}</a>
+      <a href="#">{%trans 'Link1'%}</a> 
+      <a href="#">{%trans 'Link2'%}</a>
+      <a href="#">{%trans 'Link3'%}</a>
+      {%endif%}
+      </div>
+      <h2 >{%block heading%}{%endblock%}</h2>
+      <div >{{request.flash.message}}</div>
+      <div>{%block content%}{%endblock%}</div>
+	</body>
+</html>
