@@ -15,9 +15,6 @@ def today(request):
     from datetime import date
     return {'today':date.today()}
 
-def theme(request):
-    return {'THEME':'smoothness'}
-
 def template(request):
     base_template ='template.html'
     return {'BASE_TEMPLATE':base_template}
